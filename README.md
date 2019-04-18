@@ -76,10 +76,12 @@ application:
 HOME_DIRECTORY - must be replaced with your home user name
 
 * Change "spring.kafka" section:
-    
+ 
+```    
     spring:
         kafka:
             bootstrap-servers: localhost:9092
+```
 
 * Build the project:
 
