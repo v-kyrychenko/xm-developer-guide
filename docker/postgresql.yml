@@ -1,0 +1,11 @@
+version: '2'
+services:
+    postgresql:
+        image: postgres:10.4
+        volumes:
+             - ~/work/xm-online/volumes/postgresql/:/var/lib/postgresql/data/
+        environment:
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=postgres
+        ports:
+            - 5432:5432
