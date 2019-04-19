@@ -308,7 +308,7 @@ All rows in "Node health" column must be green
 Execute the next commands:
 
     ln -s ~/work/xm-online/xm-ms-config-repository ~/xm-online
-    ln -s ~/xm-online ~/work/xm-online/xm-ms-entity/src/main/config-repository
+    ln -s ~/xm-online ~/work/xm-online/xm-ms-entity/src/main/lep-sandbox
 
 If you open "xm-ms-entity" project in IDE autocomplete functionality will be available for scripts:
    
