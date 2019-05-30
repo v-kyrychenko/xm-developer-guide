@@ -228,7 +228,7 @@ Create the database:
 
 ```
 docker  exec -ti docker_postgresql_1  /bin/sh
-psql -U poostgres
+psql -U postgres
 create database entity;
 ```
 
