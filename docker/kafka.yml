@@ -1,18 +1,22 @@
 version: '2'
 services:
     zookeeper:
-        image: wurstmeister/zookeeper:3.4.6
+        image: jbsukraine/apache-zookeeper:3.4.13
         ports:
           - 2181:2181
+          - 2888:2888
+          - 3888:3888
         volumes:
-          - ~/work/xm-online/volumes/zookeeper:/opt/zookeeper-3.4.6/data
+          - ~/work/xm-online/volumes/zookeeper:/opt/zookeeper/data
     kafka:
         image: wurstmeister/kafka:2.12-2.1.1
         environment:
+            ZOO_HOST: zookeeper:2181
+            KAFKA_LOG_DIRS: /kafka/kafka-logs-1
+            KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
             KAFKA_ADVERTISED_HOST_NAME: kafka
             KAFKA_ADVERTISED_PORT: 9092
-            KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
-            KAFKA_LOG_DIRS: /kafka/kafka-logs-1
+            KAFKA_LISTENERS: PLAINTEXT://kafka:9092
         ports:
             - 9092:9092
         volumes:
