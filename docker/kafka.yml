@@ -9,9 +9,8 @@ services:
         volumes:
           - ~/work/xm-online/volumes/zookeeper:/opt/zookeeper/data
     kafka:
-        image: wurstmeister/kafka:2.12-2.1.1
+        image: wurstmeister/kafka:2.12-2.2.1
         environment:
-            ZOO_HOST: zookeeper:2181
             KAFKA_LOG_DIRS: /kafka/kafka-logs-1
             KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
             KAFKA_ADVERTISED_HOST_NAME: kafka
