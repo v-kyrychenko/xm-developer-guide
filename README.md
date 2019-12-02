@@ -260,10 +260,11 @@ jpa:
     show-sql: false
     properties:
         hibernate.id.new_generator_mappings: true
-        hibernate.connection.provider_disables_autocommit: true
         hibernate.cache.use_second_level_cache: false
         hibernate.cache.use_query_cache: false
-        hibernate.generate_statistics: false            
+        hibernate.cache.use_minimal_puts: true
+        hibernate.show_sql: false
+        hibernate.format_sql: false     
 ```
 
 * Change "spring.kafka" section:
