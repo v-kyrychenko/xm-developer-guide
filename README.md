@@ -92,7 +92,7 @@ HOME_DIRECTORY - must be replaced with your home user name
 * Run the microservice:
 
 ``` 
-java -Xmx512m -jar build/libs/*.war
+java -Xmx128m -jar build/libs/*.war
 ```     
     
 If the microservice has started successfully you should see the following information in logs:
@@ -121,7 +121,7 @@ cd xm-gate
 * Run the microservice:
 
 ``` 
-java -Xmx512m -jar build/libs/*.war
+java -Xmx128m -jar build/libs/*.war
 ``` 
 
 f the microservice has started successfully you should see the following information in logs:
@@ -203,7 +203,7 @@ spring:
 * Run the application:
 
 ```
-java -Xmx512m -jar build/libs/*.war
+java -Xmx128m -jar build/libs/*.war
 ```
 
 If the microservice has started successfully you should see the following information in logs:
@@ -284,7 +284,7 @@ spring:
 * Run the application:
 
 ``` 
-java -Xmx512m -jar build/libs/*.war   
+java -Xmx256m -jar build/libs/*.war   
 ``` 
     
 If the microservice has started successfully you should see the following information in logs:
