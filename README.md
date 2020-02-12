@@ -179,6 +179,7 @@ jpa:
     database: POSTGRESQL
     show-sql: false
     properties:
+        hibernate.model.generator_name_as_sequence_name: false
         hibernate.id.new_generator_mappings: true
         hibernate.cache.use_second_level_cache: false
         hibernate.cache.use_query_cache: false
@@ -259,6 +260,7 @@ jpa:
     database: POSTGRESQL
     show-sql: false
     properties:
+        hibernate.model.generator_name_as_sequence_name: false
         hibernate.id.new_generator_mappings: true
         hibernate.cache.use_second_level_cache: false
         hibernate.cache.use_query_cache: false
