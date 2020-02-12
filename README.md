@@ -384,6 +384,7 @@ git remote update
 - [Tenant configuration folder](https://github.com/xm-online/xm-online/wiki/Tenant-configuration-folder)
 - [How to specify domain objects](https://github.com/xm-online/xm-online/wiki/How-to-specify-domain-objects)
 - [How can i use docker without sudo](https://askubuntu.com/questions/477551/how-can-i-use-docker-without-sudo)
+- [Dynamic kafka consumers](https://github.com/xm-online/xm-online/wiki/Dynamic-kafka-consumers)
 
 # Known issues
 
