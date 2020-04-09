@@ -21,7 +21,7 @@ Ensure that the following software is installed in system :
 * git 
 * docker
 * docker-compose
-* oracle jdk 1.8.0_181 or higher
+* *oracle jdk 1.8.0_181 or higher*** TODO out of date, update it
 
 And developer environment have minimum 16 GB of ram memory
 
@@ -307,7 +307,8 @@ All rows in "Node health" column must be green
 <img src="image/health.png" width="50%" height="20%">
 
 
-# Setup the local script storage for LEP
+# Setup the local script storage for LEP 
+**TODO out of date, update it**
 Execute the next commands:
 
     ln -s ~/work/xm-online/xm-ms-config-repository ~/xm-online
