@@ -21,7 +21,7 @@ Ensure that the following software is installed in system :
 * git 
 * docker
 * docker-compose
-* *oracle jdk 1.8.0_181 or higher*** TODO out of date, update it
+* *oracle jdk 1.8.0_181 or higher*** **TODO out of date, update it**
 
 And developer environment have minimum 16 GB of ram memory
 
