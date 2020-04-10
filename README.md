@@ -21,7 +21,7 @@ Ensure that the following software is installed in system :
 * git 
 * docker
 * docker-compose
-* *oracle jdk 1.8.0_181 or higher*** **TODO out of date, update it**
+* adoptopenjdk 11
 
 And developer environment have minimum 16 GB of ram memory
 
@@ -386,6 +386,7 @@ git remote update
 - [How to specify domain objects](https://github.com/xm-online/xm-online/wiki/How-to-specify-domain-objects)
 - [How can i use docker without sudo](https://askubuntu.com/questions/477551/how-can-i-use-docker-without-sudo)
 - [Dynamic kafka consumers](https://github.com/xm-online/xm-online/wiki/Dynamic-kafka-consumers)
+- [Adoptopenjdk](https://adoptopenjdk.net/installation.html?variant=openjdk11&jvmVariant=hotspot#x64_linux-jdk)
 
 # Known issues
 
