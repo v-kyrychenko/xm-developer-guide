@@ -21,7 +21,7 @@ Ensure that the following software is installed in system :
 * git 
 * docker
 * docker-compose
-* adoptopenjdk 11
+* [Adoptopenjdk](https://adoptopenjdk.net/installation.html?variant=openjdk11&jvmVariant=hotspot#x64_linux-jdk) 11
 
 And developer environment have minimum 16 GB of ram memory
 
