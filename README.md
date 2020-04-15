@@ -30,13 +30,20 @@ And developer environment have minimum 16 GB of ram memory
     mkdir -p ~/work/xm-online
     mkdir -p ~/work/xm-online/volumes
     cd ~/work/xm-online
+    
+    
+#### Create config repository mirror (optional, can be skipped if you already have config repository)
+
     git clone --mirror https://github.com/xm-online/xm-ms-config-repository.git
     git clone ~/work/xm-online/xm-ms-config-repository.git
     
 #### Run required docker containers
 
-Execute the next command in 'xm-developer-guide' folder:
+Execute next command:
 
+    cd ~/work/xm-online
+    git clone https://gitlab.jbs.com.ua/icthothouse/xm-developer-guide.git
+    cd xm-developer-guide
     docker-compose -f ./docker/consul.yml up -d
     docker-compose -f ./docker/kafka.yml up -d
     docker-compose -f ./docker/elasticsearch.yml up -d
