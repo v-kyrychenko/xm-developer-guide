@@ -75,13 +75,6 @@ application:
 
 HOME_DIRECTORY - must be replaced with your home user name
 
-* Change "spring.kafka" section:
- 
-```    
-    spring:
-        kafka:
-            bootstrap-servers: localhost:9092
-```
 
 * Build the project:
 
@@ -186,14 +179,6 @@ jpa:
         hibernate.generate_statistics: false
         hibernate.cache.use_minimal_puts: true                         
 ``` 
-
-* Change "spring.kafka" section:
-  
-```    
-spring:
-    kafka:
-        bootstrap-servers: localhost:9092    
-```
     
 * Build the project:
 
@@ -269,14 +254,6 @@ jpa:
         hibernate.format_sql: false     
 ```
 
-* Change "spring.kafka" section:
-
-```    
-spring:
-    kafka:
-        bootstrap-servers: localhost:9092    
-```                                 
-            
 * Build the project:
 
 ```
@@ -308,11 +285,10 @@ All rows in "Node health" column must be green
 
 
 # Setup the local script storage for LEP 
-**TODO out of date, update it**
+
 Execute the next commands:
 
-    ln -s ~/work/xm-online/xm-ms-config-repository ~/xm-online
-    ln -s ~/xm-online ~/work/xm-online/xm-ms-entity/src/main/lep-sandbox
+    java src/test/java/com/icthh/xm/ms/entity/LepTestLinkScanner.java <path-to-your-local-copy-of-config-repo>
 
 If you open "xm-ms-entity" project in IDE autocomplete functionality will be available for scripts:
    
@@ -388,7 +364,7 @@ git remote update
 - [Dynamic kafka consumers](https://github.com/xm-online/xm-online/wiki/Dynamic-kafka-consumers)
 - [Adoptopenjdk](https://adoptopenjdk.net/installation.html?variant=openjdk11&jvmVariant=hotspot#x64_linux-jdk)
 
-# Known issues
+# Troubleshooting
 
 * /usr/bin/env: «sh\r»: Нет такого файла или каталога
 
@@ -397,3 +373,10 @@ Can be fixed with following command:
 dos2unix gradlew
 ```
 
+* Can't resolve address: kafka:9092
+
+Modify the "/etc/hosts" file, add the following section:
+
+``` 
+127.0.0.1       localhost kafka
+```
