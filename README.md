@@ -13,7 +13,7 @@ This guide helps to setup minimal required environment for development
  * [xm-webapp](#xm-webapp)
  * [Update mirror config repository](#update-mirror-config-repository)
  * [Useful links](#useful-links)  
- * [Known issues](#known-issues)  
+ * [Troubleshooting](#troubleshooting)  
 
 # Setup local environment
 
