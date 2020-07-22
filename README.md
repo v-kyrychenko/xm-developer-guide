@@ -1,5 +1,5 @@
 # Introduction
-This guide helps to setup minimal required environment for development
+This guide helps to setup minimal required environment for XM developers
 
 # Table of contents
 
