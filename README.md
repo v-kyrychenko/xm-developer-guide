@@ -42,7 +42,7 @@ And developer environment have minimum 16 GB of ram memory
 Execute next command:
 
     cd ~/work/xm-online
-    git clone https://gitlab.jbs.com.ua/icthothouse/xm-developer-guide.git
+    git clone https://github.com/vkirichenko/xm-developer-guide.git
     cd xm-developer-guide
     docker-compose -f ./docker/consul.yml up -d
     docker-compose -f ./docker/kafka.yml up -d
