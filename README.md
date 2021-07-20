@@ -32,7 +32,7 @@ And developer environment have minimum 16 GB of ram memory
     cd ~/work/xm-online
     
     
-#### Create config repository mirror (optional, can be skipped if you already have config repository)
+#### (OPTIONAL) Create config repository mirror (optional, can be skipped if you already have config repository)
 
     git clone --mirror https://github.com/xm-online/xm-ms-config-repository.git
     git clone ~/work/xm-online/xm-ms-config-repository.git
