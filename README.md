@@ -25,6 +25,12 @@ Ensure that the following software is installed in system :
 
 And developer environment have minimum 16 GB of ram memory
 
+#### Create symlink to xm-ms-config-repository 
+This link will be used by LEP libraty for file tenant-script-storage
+
+    cd ~
+    ln -s <path-to-root-of-config-repo>/ispgest-xm-configuration xm-online
+
 #### Prepare working directory
 
     mkdir -p ~/work/xm-online
