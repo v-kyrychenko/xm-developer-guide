@@ -288,6 +288,74 @@ If the microservice has started successfully you should see the following inform
             External:       http://127.0.1.1:8081/
             Profile(s):     [dev, swagger]
     ----------------------------------------------------------
+# xm-ms-dashboard
+* Clone the project:
+
+``` 
+cd ~/work/xm-online
+git clone https://github.com/xm-online/xm-ms-dashboard.git
+cd xm-ms-dashboard
+``` 
+
+* Create the database:
+
+``` 
+docker  exec -ti docker_postgresql_1  /bin/sh
+psql -U postgres
+create database dashboard;
+\q
+exit
+``` 
+
+* Modify the file:
+
+``` 
+src/main/resources/config/application-dev.yml 
+``` 
+
+* Change "spring.datasource" section:
+
+``` 
+datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:postgresql://localhost:5432/dashboard
+    username: postgres
+    password: postgres        
+jpa:
+    database-platform: io.github.jhipster.domain.util.FixedPostgreSQL82Dialect
+    database: POSTGRESQL
+    show-sql: false
+    properties:
+        hibernate.model.generator_name_as_sequence_name: false
+        hibernate.id.new_generator_mappings: true
+        hibernate.cache.use_second_level_cache: false
+        hibernate.cache.use_query_cache: false
+        hibernate.generate_statistics: false
+        hibernate.cache.use_minimal_puts: true                         
+``` 
+    
+* Build the project:
+
+```
+./gradlew -x test --no-daemon bootWar 
+```
+    
+* Run the application:
+
+```
+java -Xmx128m -jar build/libs/*.war
+```
+
+If the microservice has started successfully you should see the following information in logs:
+
+    ----------------------------------------------------------
+        Application 'dashboard' is running! Access URLs:
+        Local: 		http://localhost:9999/
+        External: 	http://127.0.1.1:9999/
+        Profile(s): 	[swagger, dev]
+    ----------------------------------------------------------
+
+
 
 # Health checks             
 
