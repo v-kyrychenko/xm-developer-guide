@@ -428,7 +428,7 @@ npm start
 
 ```    
 login: xm
-password: P@ssword        
+password: P@ssw0rd        
 ```
 
 # Update mirror config repository
