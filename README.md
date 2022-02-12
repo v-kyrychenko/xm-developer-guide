@@ -186,42 +186,6 @@ psql -U postgres
 create database entity;
 ```
 
-* Modify the file:
-
-```
-src/main/resources/config/application-dev.yml 
-```
-
-* Uncomment the "lep" subsection in "application" section: 
-
-```
-application:
-        lep:
-            tenant-script-storage: FILE       
-```
-
-* Change "spring.datasource" section:
-
-```
-datasource:
-    type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:postgresql://localhost:5432/entity
-    username: postgres
-    password: postgres        
-jpa:
-    database-platform: io.github.jhipster.domain.util.FixedPostgreSQL82Dialect
-    database: POSTGRESQL
-    show-sql: false
-    properties:
-        hibernate.model.generator_name_as_sequence_name: false
-        hibernate.id.new_generator_mappings: true
-        hibernate.cache.use_second_level_cache: false
-        hibernate.cache.use_query_cache: false
-        hibernate.cache.use_minimal_puts: true
-        hibernate.show_sql: false
-        hibernate.format_sql: false     
-```
-
 * Build the project:
 
 ```
@@ -231,7 +195,12 @@ jpa:
 * Run the application:
 
 ``` 
-java -Xmx256m -jar build/libs/*.war   
+java -Xmx256m -jar \
+-Dapplication.lep.tenant-script-storage=FILE \
+-Dspring.datasource.username=postgres \
+-Dspring.datasource.password=postgres \
+-Dspring.profiles.active=prod \
+build/libs/*.war   
 ``` 
     
 If the microservice has started successfully you should see the following information in logs:
@@ -242,6 +211,7 @@ If the microservice has started successfully you should see the following inform
             External:       http://127.0.1.1:8081/
             Profile(s):     [dev, swagger]
     ----------------------------------------------------------
+    
 # xm-ms-dashboard
 * Clone the project:
 
