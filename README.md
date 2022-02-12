@@ -197,6 +197,7 @@ create database entity;
 ``` 
 java -Xmx256m -jar \
 -Dapplication.lep.tenant-script-storage=FILE \
+-Dspring.kafka.bootstrap-servers=localhost:9092 \
 -Dspring.datasource.username=postgres \
 -Dspring.datasource.password=postgres \
 -Dspring.profiles.active=prod \
