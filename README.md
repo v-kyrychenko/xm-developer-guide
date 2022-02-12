@@ -83,7 +83,7 @@ java -Xmx128m -jar \
 -Dapplication.git.login=your.git.login \
 -Dapplication.git.password=your.git.password \
 -Dapplication.git.branch-name=your.git.config.branch \
-xm-ms-config/build/libs/*.war
+build/libs/*.war
 ```     
     
 If the microservice has started successfully you should see the following information in logs:
