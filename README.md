@@ -4,7 +4,7 @@ This guide helps to setup minimal required environment for XM developers
 # Table of contents
 
  * [Setup local environment](#setup-local-environment)
- * [xm-ms-configs](#xm-ms-configs)
+ * [xm-ms-configs](#xm-ms-config)
  * [xm-gate](#xm-gate)
  * [xm-uaa](#xm-uaa)
  * [xm-ms-entity](#xm-ms-entity)
