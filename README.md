@@ -69,27 +69,6 @@ git clone https://github.com/xm-online/xm-ms-config.git
 cd xm-ms-config
 ```
 
-* Modify the file
-
-```
-src/main/resources/config/application-dev.yml 
-```
-
-* Change "application" section:
-
-```
-application:
-        git:
-            uri: /home/{HOME_DIRECTORY}/work/xm-online/xm-ms-config-repository.git
-            login:
-            password:
-            branch-name: master
-            max-wait-time-second: 30    
-```
-
-HOME_DIRECTORY - must be replaced with your home user name
-
-
 * Build the project:
 
 ``` 
@@ -99,7 +78,12 @@ HOME_DIRECTORY - must be replaced with your home user name
 * Run the microservice:
 
 ``` 
-java -Xmx128m -jar build/libs/*.war
+java -Xmx128m -jar \
+-Dapplication.git.uri=your.git.repo.url \
+-Dapplication.git.login=your.git.login \
+-Dapplication.git.password=your.git.password \
+-Dapplication.git.branch-name=your.git.config.branch \
+xm-ms-config/build/libs/*.war
 ```     
     
 If the microservice has started successfully you should see the following information in logs:
