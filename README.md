@@ -143,41 +143,6 @@ create database uaa;
 exit
 ``` 
 
-* Modify the file:
-
-``` 
-src/main/resources/config/application-dev.yml 
-``` 
-
-* Uncomment the "lep" subsection in "application" section:
-
-``` 
-application:
-        lep:
-            tenant-script-storage: FILE       
-``` 
-
-* Change "spring.datasource" section:
-
-``` 
-datasource:
-    type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:postgresql://localhost:5432/uaa
-    username: postgres
-    password: postgres        
-jpa:
-    database-platform: io.github.jhipster.domain.util.FixedPostgreSQL82Dialect
-    database: POSTGRESQL
-    show-sql: false
-    properties:
-        hibernate.model.generator_name_as_sequence_name: false
-        hibernate.id.new_generator_mappings: true
-        hibernate.cache.use_second_level_cache: false
-        hibernate.cache.use_query_cache: false
-        hibernate.generate_statistics: false
-        hibernate.cache.use_minimal_puts: true                         
-``` 
-    
 * Build the project:
 
 ```
@@ -187,7 +152,12 @@ jpa:
 * Run the application:
 
 ```
-java -Xmx128m -jar build/libs/*.war
+java -Xmx128m -jar \
+-Dapplication.lep.tenant-script-storage=FILE \
+-Dspring.datasource.username=postgres \
+-Dspring.datasource.password=postgres \
+-Dspring.profiles.active=prod \
+xm-uaa/build/libs/*.war
 ```
 
 If the microservice has started successfully you should see the following information in logs:
