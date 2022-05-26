@@ -272,9 +272,15 @@ All rows in "Node health" column must be green
 
 # Setup the local script storage for LEP 
 
-Execute the next commands:
+Download and install latest version of idea plugin for XM developers:
 
-    java src/test/java/com/icthh/xm/ms/entity/LepTestLinkScanner.java <path-to-your-local-copy-of-config-repo>
+https://github.com/xm-online/xm-online-idea-plugin/releases
+
+Setup plugin using configuration like on screen:
+
+<img src="image/plugin-config.png" width="50%" height="20%">
+
+And select created envisonment
 
 If you open "xm-ms-entity" project in IDE autocomplete functionality will be available for scripts:
    
