@@ -280,7 +280,7 @@ Setup plugin using configuration like on screen:
 
 <img src="image/plugin-config.png" width="50%" height="20%">
 
-And select created envisonment
+Ckick button "Test connection", it should display: "Successful". After that press "OK" and select created envisonment.
 
 If you open "xm-ms-entity" project in IDE autocomplete functionality will be available for scripts:
    
