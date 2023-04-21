@@ -1,7 +1,7 @@
 version: '2'
 services:
     zookeeper:
-        image: wurstmeister/zookeeper:3.4.6
+        image: zookeeper:3.8.1
         ports:
           - 2181:2181
           - 2888:2888
@@ -9,7 +9,7 @@ services:
         volumes:
           - ~/work/xm-online/volumes/zookeeper:/opt/zookeeper/data
     kafka:
-        image: wurstmeister/kafka:2.12-2.2.1
+        image: wurstmeister/kafka:2.13-2.8.1
         environment:
             KAFKA_LOG_DIRS: /kafka/kafka-logs-1
             KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
