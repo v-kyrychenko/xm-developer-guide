@@ -26,23 +26,11 @@ Ensure that the following software is installed in system :
 
 And developer environment have minimum 16 GB of ram memory
 
-#### Create symlink to xm-ms-config-repository 
-This link will be used by LEP library for file tenant-script-storage
-
-    cd ~
-    ln -s <path-to-root-of-config-repo>/xm-ms-config-repository xm-online
-
 #### Prepare working directory
 
     mkdir -p ~/work/xm-online
     mkdir -p ~/work/xm-online/volumes
     cd ~/work/xm-online
-    
-    
-#### (OPTIONAL) Create config repository mirror (optional, can be skipped if you already have config repository)
-
-    git clone --mirror https://github.com/xm-online/xm-ms-config-repository.git
-    git clone ~/work/xm-online/xm-ms-config-repository.git
     
 #### Run required docker containers
 
@@ -68,6 +56,13 @@ cd ~/work/xm-online
 git clone https://github.com/xm-online/xm-ms-config.git
 cd xm-ms-config
 ```
+
+* Create symlink to cloned repo.
+   
+This link will be used by LEP library for file tenant-script-storage
+
+    cd ~
+    ln -s <path-to-root-of-config-repo>/xm-ms-config-repository xm-online
 
 * Build the project:
 
