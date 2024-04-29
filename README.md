@@ -61,7 +61,7 @@ Optional container for postgres (can be skipped if postgres is already installed
 
 # xm-ms-config
 
-* Clone the project:
+* Clone the project (or you own git repo with config):
 
 ```
 cd ~/work/xm-online
@@ -79,9 +79,7 @@ cd xm-ms-config
 
 ``` 
 java -Xmx128m -jar \
--Dapplication.git.uri=your.git.repo.url \
--Dapplication.git.login=your.git.login \
--Dapplication.git.password=your.git.password \
+-Dapplication.git.uri=/<home_directory_path>/work/xm-online \
 -Dapplication.git.branch-name=your.git.config.branch \
 build/libs/*.war
 ```     
@@ -339,13 +337,7 @@ npm start
 ```    
 login: xm
 password: P@ssw0rd        
-```
-
-# Update mirror config repository
-Execute next command for synchronization of you local config repository with remote:
-```
-git remote update   
-```   
+```  
    
 # Useful links
 
