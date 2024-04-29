@@ -62,7 +62,7 @@ cd xm-ms-config
 This link will be used by LEP library for file tenant-script-storage
 
     cd ~
-    ln -s <path-to-root-of-config-repo>/xm-ms-config-repository xm-online
+    ln -s <path-to-root-of-config-repo> xm-online
 
 * Build the project:
 
