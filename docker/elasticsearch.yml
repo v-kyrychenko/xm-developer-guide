@@ -1,12 +1,12 @@
 version: '2'
 services:
-    entity-elasticsearch:
-        image: elasticsearch:5.6.5
+    elasticsearch:
+        image: webhippie/elasticsearch:5.6
         volumes:
              - ~/work/xm-online/volumes/elasticsearch/:/usr/share/elasticsearch/data/
         ports:
             - 9200:9200
             - 9300:9300
-        command: -Enetwork.host=0.0.0.0 -Ediscovery.type=single-node
+        #command: -Enetwork.host=0.0.0.0 -Ediscovery.type=single-node
         environment:
             - "ES_JAVA_OPTS=-Xms128m -Xmx256m"

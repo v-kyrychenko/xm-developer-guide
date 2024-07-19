@@ -54,6 +54,7 @@ Execute next command:
     docker-compose -f ./docker/consul.yml up -d
     docker-compose -f ./docker/kafka.yml up -d
     docker-compose -f ./docker/elasticsearch.yml up -d
+    docker-compose -f ./docker/elasticsearch8.yml up -d
     
 Optional container for postgres (can be skipped if postgres is already installed in system)    
     

@@ -1,0 +1,13 @@
+version: '2'
+services:
+    elasticsearch8:
+        image: elasticsearch:8.13.4
+        volumes:
+             - ~/work/xm-online/volumes/elasticsearch8:/usr/share/elasticsearch/data
+        ports:
+            - 9208:9200
+            - 9308:9300
+        environment:
+            - "xpack.security.enabled=false"
+            - "discovery.type=single-node"
+            - "reindex.remote.whitelist=172.18.0.6:9200"

@@ -5,6 +5,7 @@ services:
         volumes:
              - ~/work/xm-online/volumes/postgresql/:/var/lib/postgresql/data/
         environment:
+            - TZ=Europe/Zurich
             - POSTGRES_USER=postgres
             - POSTGRES_PASSWORD=postgres
         ports:
