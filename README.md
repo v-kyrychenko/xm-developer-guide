@@ -26,23 +26,11 @@ Ensure that the following software is installed in system :
 
 And developer environment have minimum 16 GB of ram memory
 
-#### Create symlink to xm-ms-config-repository 
-This link will be used by LEP library for file tenant-script-storage
-
-    cd ~
-    ln -s <path-to-root-of-config-repo>/xm-ms-config-repository xm-online
-
 #### Prepare working directory
 
     mkdir -p ~/work/xm-online
     mkdir -p ~/work/xm-online/volumes
     cd ~/work/xm-online
-    
-    
-#### (OPTIONAL) Create config repository mirror (optional, can be skipped if you already have config repository)
-
-    git clone --mirror https://github.com/xm-online/xm-ms-config-repository.git
-    git clone ~/work/xm-online/xm-ms-config-repository.git
     
 #### Run required docker containers
 
@@ -62,13 +50,20 @@ Optional container for postgres (can be skipped if postgres is already installed
 
 # xm-ms-config
 
-* Clone the project:
+* Clone the project (or you own git repo with config):
 
 ```
 cd ~/work/xm-online
 git clone https://github.com/xm-online/xm-ms-config.git
 cd xm-ms-config
 ```
+
+* Create symlink to cloned repo.
+   
+This link will be used by LEP library for file tenant-script-storage
+
+    cd ~
+    ln -s <path-to-root-of-config-repo> xm-online
 
 * Build the project:
 
@@ -80,9 +75,7 @@ cd xm-ms-config
 
 ``` 
 java -Xmx128m -jar \
--Dapplication.git.uri=your.git.repo.url \
--Dapplication.git.login=your.git.login \
--Dapplication.git.password=your.git.password \
+-Dapplication.git.uri=/<home_directory_path>/work/xm-online \
 -Dapplication.git.branch-name=your.git.config.branch \
 build/libs/*.war
 ```     
@@ -340,13 +333,7 @@ npm start
 ```    
 login: xm
 password: P@ssw0rd        
-```
-
-# Update mirror config repository
-Execute next command for synchronization of you local config repository with remote:
-```
-git remote update   
-```   
+```  
    
 # Useful links
 
